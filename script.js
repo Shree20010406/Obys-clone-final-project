@@ -26,25 +26,39 @@ setInterval(function(){
 },30);
 
     }
-})
+});
 
 tl.to(".line h2",{
     animationName:"anime",
     opacity:1
-})
+});
 
 tl.to("#loader",{
     opacity:0,
-    duration:.4,
-    delay:3.2
-})
+    duration:.2 ,
+    delay:1
+});
 
 tl.from("#page1",{
     y:1600,
     opacity:0,
     duration: .5,
     ease: Power1
-})
+});
+
+tl.to("#loader",{
+    display: "none"
+});
+
+tl.from("nav",{
+    opacity: 0,
+});
+tl.from(".hero h1, #hero3 h2",{
+    y:140,
+    stagger:.2
+});
+
+
 }
 
 loadingAnimation();
@@ -58,6 +72,5 @@ document.addEventListener("mousemove",function(dets){
     })
 })
 
-Shery.makeMagnet("#nav-part2 h4",{
-   
-  });
+
+Shery.makeMagnet("#nav-part2 h4");
