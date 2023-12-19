@@ -1,15 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plain Light';  
+    font-family: "Plain Light";
     color: white;
 }
-html , body{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
-#loader{
+
+#loader {
     height: 100%;
     width: 100%;
     background-color: #010101;
@@ -18,17 +21,14 @@ html , body{
     padding: 20vh 9vw;
 }
 
-#cursor{
-    height: 2.2vw;
-    width: 2.2vw;
-    background: transparent;
+.mousefollower {
+    background-color: #fff;
+    scale: 2.5;
     border: 3px solid #fff;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 99;
-    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
 }
-.line{
+
+.line {
     /* background: red; */
     height: fit-content;
     margin-bottom: 3px;
@@ -39,31 +39,34 @@ html , body{
     gap: 2vw;
 }
 
-.line1-part1{
+.line1-part1 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3vw;
 }
 
-.line1-part1 h5, .line1-part1 h6{
+.line1-part1 h5,
+.line1-part1 h6 {
     font-size: 4vw;
     font-family: "Silk Serif";
     font-weight: 200;
 }
 
-.line1-part1 h5{
+.line1-part1 h5 {
     /* background: red; */
     width: 4vw;
     text-align: right;
 }
-.line h1{
+
+.line h1 {
     font-size: 7vw;
     font-weight: 500;
     text-transform: uppercase;
     font-family: "Plain Light";
 }
-.line h2{
+
+.line h2 {
     font-size: 5.1vw;
     font-weight: 500;
     text-transform: uppercase;
@@ -73,114 +76,130 @@ html , body{
     animation-iteration-count: infinite;
 }
 
-
 @keyframes anime {
-
-     0%{
+    0% {
         font-family: "Plain light";
         -webkit-text-stroke: 1px #fff;
         opacity: 1;
         font-weight: 500;
         color: #fff;
-     }
+    }
 
-     48%{
+    48% {
         font-family: "Plain light";
         -webkit-text-stroke: 1px #fff;
         opacity: 0;
         font-weight: 500;
         color: #fff;
-        
-     }
+    }
 
-     50%{
+    50% {
         font-family: "Silk Serif";
         -webkit-text-stroke: 1px solid #fff;
         opacity: 1;
         font-weight: 500;
         color: transparent;
-     }
+    }
 
-     100%{
+    100% {
         font-family: "Silk Serif";
         -webkit-text-stroke: 1px solid #fff;
         opacity: 0;
         font-weight: 500;
         color: transparent;
-        
-     }
+    }
 }
 
-#main{
+#main {
     position: relative;
-    background-color: #000000;
+    background: #151515;
 }
-#page1{
+
+#page1 {
     height: 100vh;
     width: 100%;
-    background: #151515;
+    background: #060606;
     padding: 3vw 4.6vw;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#nav-part2{
+#nav-part2 {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 3vw;
 }
 
-#nav-part2 h4{
+#nav-part2 h4 {
     font-size: 1vw;
     font-weight: 500;
 }
 
-.hero{
+.hero {
     /* background: red; */
-    width: 77%;
-    margin-left: 25%;
+    width: 74%;
+    margin-left: 14%;
     overflow: hidden;
     height: fit-content;
     position: relative;
     z-index: 999;
-    
+    padding-left: 9vw;
 }
 
-.hero h1{
+#hero1 h1 {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+#hero1 h1::before {
+    content: "01";
+    font-size: 3.4vw;
+    position: absolute;
+    /* background: red; */
+    left: -15%;
+    top: -17%;
+    font-family: "silk serif";
+    overflow: hidden;
+}
+
+.hero h1 {
     font-size: 7.6vw;
     line-height: 7.6vw;
     text-transform: uppercase;
     font-weight: 500;
-    
+    /* background: red; */
+    position: relative;
 }
 
-.hero:nth-child(2){
+.hero:nth-child(2) {
     margin-top: 9.7vw;
 }
-#hero3{
+
+#hero3 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-#hero3 h2{
+
+#hero3 h2 {
     font-size: 7.6vw;
     line-height: 7.6vw;
     text-transform: uppercase;
     font-weight: 500;
 }
 
-#hero3 h2:hover{
+#hero3 h2:hover {
     -webkit-text-stroke: 1px #fff;
     color: transparent;
     font-size: 100;
 }
 
-#page2{
+#page2 {
     height: 100vh;
     width: 100%;
     /* background: red; */
@@ -189,80 +208,339 @@ nav{
     background: #151515;
 }
 
-#video-container{
+#video-container {
+    /* margin-top: -7vw; */
     width: 70%;
     margin-left: 30%;
     height: 70vh;
+    /* background: red; */
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-position: center;
+    background-size: cover;
     position: relative;
-    
 }
-#video-container video{
+
+#video-container video {
     height: 100%;
     width: 100%;
     object-fit: cover;
-
+    opacity: 0;
 }
 
-#vid-cursor{
+#vid-cursor {
     height: 8vw;
     width: 8vw;
-    background-color: #FFA63D;
+    background-color: #ffa63d;
     border-radius: 50%;
     position: absolute;
     left: 85%;
     top: -10%;
+    transform: translate(-50% -50%);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#vid-cursor i{
+#vid-cursor i {
     font-size: 2.4vw;
 }
 
-#page3{
+#page3 {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    background: #6a6969;
+    background: #151515;
 }
-#page4{
+
+#page3 h1 {
+    font-size: 7.5vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 25vw;
+    position: relative;
+    font-weight: 700;
+}
+
+#page3 h1::before {
+    content: "02";
+    font-size: 3.4vw;
+    position: absolute;
+    left: -12%;
+    top: 12%;
+    font-family: "silk serif";
+}
+
+#page3 .underline {
+    height: 2px;
+    background-color: #b0afaf;
+    margin-left: 25vw;
+    margin-top: 12vh;
+    margin-right: 4vw;
+    margin-bottom: 7vw;
+}
+
+
+
+.image-container {
+    /* background: red; */
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    justify-content: flex-start;
+    margin: 13vh 0;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 4vw;
+}
+
+.images {
+    /* flex-shrink: 0; */
+    height: 39vw;
+    width: 30vw;
+    position: relative;
+    overflow: hidden;
+    margin: 1vw;
+
+    /* background: royalblue; */
+}
+
+.img-text-elem:nth-child(1) .images{
+    height: 28vw;
+    width: 22vw;
+}
+
+.img-text-elem h2{
+    font-size: 2.4vw;
+    margin-left: 1vw;
+    margin-top: -3vw;
+}
+
+#text-div{
+    margin-top: 11vw;
+}
+#text-div h2{
+    font-size: 2.5vw;
+}
+#text-div2 h2{
+    font-size: 2.4vw;
+    /* margin-bottom: 2vw; */
+    font-weight: 600;
+}
+#text-div3 .images{
+    height: 27vw;
+    width: 23vw; 
+}
+#text-div3{
+    margin-top: -7.5vw;
+}
+
+#text-div4 .images{
+    height: 38vw;
+    width: 30vw; 
+}
+#text-div4{
+    margin-top: 7.5vw;
+    margin-left: 14vw;
+   
+}
+
+.bottom-text-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 1.3vw;
+    border-bottom: 2px solid #d7d5d5;
+    margin: 2vw 1vw;
+    /* background: red; */
+}
+
+.bottom-text-elem h5{
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.5vw;
+}
+
+.bottom-text-elem h4{
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3-circle {
+    height: 23vw;
+    width: 23vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-top: 27vw;
+    margin-left: 11vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3-circle svg {
+    height: 8vw;
+
+    /* rotate: 90deg; */
+}
+#circle3{
+    margin-top: 28vw;
+    margin-right: -6vw;
+    
+}
+#circle3 svg{
+    rotate: -90deg;
+    
+}
+
+.page3-circle2 {
+    height: 23vw;
+    width: 23vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    /* margin-top: 5vw; */
+    margin-left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page3-circle2 svg {
+    height: 8vw;
+    rotate: -45deg;
+}
+
+.circle-in {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    scale: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .6s;
+}
+
+.circle-in p {
+    color: black;
+    font-size: .85vw;
+    width: 78%;
+    font-weight: 600;
+    scale: 0;
+    opacity: 0;
+    transition: all ease .4s;
+    /* transition-delay: 2s; */
+}
+
+.page3-circle2 .circle-in p {
+    font-size: .96vw;
+    width: 50%;
+    font-weight: 600;
+    scale: 0;
+    opacity: 0;
+    transition: all ease .4s;
+    /* transition-delay: .6s; */
+}
+
+.page3-circle:hover .circle-in {
+    scale: 1;
+}
+
+.page3-circle:hover p {
+    scale: 1;
+    opacity: 1;
+}
+
+.page3-circle2:hover p {
+    scale: 1;
+    opacity: 1;
+}
+
+.page3-circle2:hover .circle-in {
+    scale: 1;
+}
+
+#page3-orange-circle{
+    height: 23vw;
+    width: 23vw;
+    background-color: #ffa63d;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale:1;
+    transition: all ease .3s;
+    margin-bottom: -15vw;
+}
+
+#page3-orange-circle h2{
+    font-size: 1vw;
+    font-weight: 300;
+}
+#page3-orange-circle h2 span{
+    font-family: "silk serif";
+}
+
+#page3-orange-circle:hover{
+    scale: .9;
+}
+
+#page4 {
     min-height: 100vh;
     width: 100%;
     position: relative;
     /* padding: 6vw 4vw; */
     background: #151515;
-
 }
 
-#page4-content{
+#page4-content {
     /* background: red; */
     width: 70%;
     margin-left: 25%;
     position: relative;
-
 }
 
-#page4-content h1{
+#page4-content h1 {
     font-size: 7.5vw;
     font-weight: 500;
     text-transform: uppercase;
-    
 }
 
-#underline{
+#page4-content h1::before {
+    content: "03";
+    font-size: 3.4vw;
+    position: absolute;
+    left: -14%;
+    top: 0.6%;
+    font-family: "silk serif";
+}
+
+#underline {
     margin-top: 4vw;
     border-top: 2px solid white;
 }
 
-#underline p{
+#underline p {
     margin-top: 4vw;
     width: 55%;
     font-size: 2.1vw;
     font-weight: 200;
 }
 
-#div-content{
+#div-content {
     width: 70vw;
     /* background: red; */
     margin-top: 4vw;
@@ -270,12 +548,12 @@ nav{
     position: relative;
 }
 
-#div-content img{
-    width: 45%; 
+#div-content img {
+    width: 45%;
     object-fit: cover;
 }
 
-#div-content p{
+#div-content p {
     margin-left: 2vw;
     font-size: 1vw;
     width: 26%;
@@ -283,31 +561,32 @@ nav{
     /* background: red; */
 }
 
-#blue-div{
+#blue-div {
     width: 32vw;
     height: 95vh;
-    background: #3F7DF4;
+    background: #3f7df4;
     position: relative;
     margin-top: -28vh;
     margin-left: 21vw;
     padding: 3vw 2.7vw;
 }
 
-.blue-elem{
+.blue-elem {
     display: flex;
     border-bottom: 1px solid #fff;
     padding-bottom: 4vh;
     margin-bottom: 4vw;
-    
 }
-.blue-elem h4{
+
+.blue-elem h4 {
     /* background: red; */
     font-size: 1.6vw;
     width: 50%;
     text-align: left;
     font-weight: 200;
 }
-.blue-elem h5{
+
+.blue-elem h5 {
     /* background: red; */
     font-size: 1vw;
     width: 40%;
@@ -315,26 +594,152 @@ nav{
     font-weight: 200;
 }
 
-.underline-bottom{
+.underline-bottom {
     height: 2px;
     width: 69vw;
     background-color: white;
     margin-top: 4vw;
-
 }
 
-#page4-content>h2{
+#page4-content>h2 {
     font-size: 1vw;
     margin-top: 2.6vh;
 }
 
-#page5{
+#page5 {
     min-height: 100vh;
     width: 100%;
     position: relative;
+    margin-top: -2vw;
     background: #151515;
-
 }
 
+.elem {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
+.elem h1 {
+    font-size: 6.8vw;
+    /* background: red; */
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 15px;
+    animation-name: anime1;
+    animation-duration: 22s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    margin-bottom: -2vw;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 100;
+}
 
+.elem2 {
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.elem2 h1 {
+    font-size: 6vw;
+    /* background: red; */
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 15px;
+    /* transform: translateX(-100%); */
+    animation-name: anime1;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    margin-bottom: -2vw;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 100;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 19px));
+    }
+}
+
+.elem h1 span {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 100;
+}
+
+.elem2 h1 span {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 100;
+}
+
+footer {
+    width: 100%;
+    height: 100vh;
+    /* background: red; */
+    padding-left: 27vw;
+    padding-right: 5vw;
+    background: #151515;
+}
+
+footer h1 {
+    font-size: 8vw;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 4vw;
+    position: relative;
+}
+
+footer h1::before {
+    content: "04";
+    font-size: 3.4vw;
+    position: absolute;
+    left: -14%;
+    top: 8%;
+    font-family: "silk serif";
+}
+
+.underline {
+    height: 2px;
+    background-color: #b0afaf;
+}
+
+.box-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5vw 0;
+    /* background: red; */
+    margin-bottom: 3vw;
+}
+
+.box {
+    /* background: red; */
+    width: 30%;
+}
+
+.box-div h4 {
+    font-size: 1vw;
+    font-weight: 600;
+    margin-bottom: 2vw;
+}
+
+.box-div h5 {
+    font-size: 1.6vw;
+    font-weight: 500;
+}
+
+#under {
+    text-decoration: underline;
+}
