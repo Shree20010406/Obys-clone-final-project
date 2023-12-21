@@ -161,7 +161,21 @@ function sheryAnimations(){
 
 }
 
+let tl2 = gsap.timeline({
+})
 
+tl2.from("#page3 .scroll-anim h1",{
+    y: 100,
+    opacity: 0,
+    scrollTrigger:{
+        trigger: "#page3",
+        scroller: "#main",
+        markers: true,
+        start: "top 44%",
+        end: "top 10%"
+    } 
+    
+})
 locoScroll();
 sheryAnimations();
 // cursorAnimation();
